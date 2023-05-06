@@ -1,0 +1,9 @@
+.container {
+    display: inline-flex
+}
+
+.logo {
+    width: 25px;
+    margin-left: .5em;
+    margin-right: .5em;
+}

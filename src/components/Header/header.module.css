@@ -1,0 +1,23 @@
+.container {
+    background-color: #ffffff;
+}
+
+.headerContainer {
+    width: 50vw;
+    height: 7vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 25vw;
+}
+
+.img {
+    width: 170px;
+    height: 60px;
+}
+
+.inputsearch {
+    width: 800px;
+    height: 30px;
+    border-radius: 5px;
+}
