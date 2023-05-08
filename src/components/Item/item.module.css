@@ -1,0 +1,25 @@
+.container {
+    width: 350px;
+}
+
+.img {
+    width: 214px;
+    height: 214px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.name {
+    font-size: 1em;
+    text-align: start;
+}
+
+.price {
+    font-size: 1em;
+    text-align: start;
+}
+
+.Link {
+    text-decoration: none;
+}

@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logoCart from "../../asset/carrito-de-compras.png"
 import logoUser from "../../asset/usuario.png"
-import Styled from "./cartuser.module.css"
+import Styled from "./cartwidget.module.css"
 
-const CartUser = () => {
+const CartWidget = () => {
     return (
         <div className={Styled.container}>
             <Link><img className={Styled.logo} src={logoUser}></img></Link>
@@ -15,4 +15,4 @@ const CartUser = () => {
         </div>
     );
 }
-export default CartUser;
+export default CartWidget;
