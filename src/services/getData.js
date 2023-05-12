@@ -1,5 +1,5 @@
 import DB from "../config/firebase"
-import { collection, getDocs, getDoc, query, where, doc } from "firebase/firestore"
+import { collection, getDocs, getDoc, query, where, doc, addDoc, updateDoc } from "firebase/firestore"
 import { dataDBAdapter } from "../adapted/adapted"
 
 export const getProducts = async () => {
@@ -21,4 +21,13 @@ export const getProductsByCategory = async (category) => {
     const response = await getDocs(queryRef)
     let newData = response.docs.map((element) => dataDBAdapter(element))
     return newData
+}
+export const CreateOrder = async (data) => {
+    const collectionRef = collection(DB, "order")
+    const response = await addDoc(collectionRef, data)
+    return response.id
+}
+export const updatStock = async (id, newStock) => {
+    const docRef = doc(DB, "products", id)
+    const response = await updateDoc(docRef, { stock: newStock })
 }

@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import Styled from "./itemdetail.module.css"
 import ItemCount from '../ItemCount/ItemCount';
+import { cartContext } from '../../context/cartContext';
 
-const ItemDetail = ({ id, name, price, description, picture }) => {
+const ItemDetail = ({ id, name, price, description, picture, stock }) => {
+    const { addItemCart } = useContext(cartContext)
+    const [quantityAdde, setQuantityAdde] = useState(0);
+    const HandleAdd = (quantity) => {
+        setQuantityAdde(quantity)
+        const item = {
+            id: id,
+            name: name,
+            price: price,
+            picture: picture[0],
+            quantity: quantity,
+            subtotal: price * quantity,
+            stock: stock
+        }
+        addItemCart(item)
+    }
     return (
         <div className={Styled.container}>
             <div>
@@ -15,11 +32,7 @@ const ItemDetail = ({ id, name, price, description, picture }) => {
                 <p className={Styled.description}>{description}</p>
             </div>
             <div className={Styled.cart}>
-                <ItemCount></ItemCount>
-                <div className={Styled.button_container}>
-                    <button className={Styled.button_cart}>Agregar al Carrito</button>
-                    <button className={Styled.button_checkout}>Terminar Compra</button>
-                </div>
+                {!quantityAdde > 0 ? <ItemCount onAdd={HandleAdd}></ItemCount> : <Link to={"/cart"}><button className={Styled.button_checkout}>Terminar Compra</button></Link>}
             </div>
         </div>
     );

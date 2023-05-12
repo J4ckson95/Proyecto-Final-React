@@ -1,0 +1,24 @@
+.container {
+    width: 30vw;
+    padding: 2em;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 25px rgb(0 0 0 / 10%);
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+}
+
+.button {
+    margin-top: 20px;
+    padding: .5em;
+    background-color: hsl(178, 80%, 46%);
+    border-radius: 10px;
+    border: transparent;
+
+}

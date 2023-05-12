@@ -1,9 +1,23 @@
 .container {
-    display: inline-flex
+    display: inline-flex;
 }
 
 .logo {
     width: 25px;
     margin-left: .5em;
     margin-right: .5em;
+}
+
+.cart {
+    position: relative;
+}
+
+.quantity {
+    position: absolute;
+    top: -7px;
+    left: 35px;
+    background-color: #23c9c4;
+    font-size: .8em;
+    border-radius: 25px;
+    padding: 2.5px;
 }

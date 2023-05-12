@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5em;
+    margin-top: 10px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid hsla(0, 0%, 0%, 0.603);
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+}
+
+.box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    width: 300px;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.logo {
+    width: 30px;
+    cursor: pointer;
+}

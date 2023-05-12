@@ -1,13 +1,14 @@
 export const dataDBAdapter = (doc) => {
     const id = doc.id
-    const { name, price, description, picture, category } = doc.data()
+    const { name, price, description, picture, category, stock } = doc.data()
     const data = {
         id: id,
         name: name,
         price: parseInt(price),
         description: description,
         category: category,
-        picture: picture
+        picture: picture,
+        stock: stock
     }
     return data
 }

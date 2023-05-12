@@ -1,0 +1,32 @@
+.container {
+    width: 35vw;
+    height: 100%;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 25px rgb(0 0 0 / 10%);
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 20px;
+}
+
+.button {
+    font-weight: bold;
+    font-size: 1em;
+    margin: 2em 2em;
+    margin-left: 190px;
+    padding: 1em;
+    background-color: hsl(178, 80%, 46%);
+    border: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.total {
+    padding: 1em;
+    text-align: center;
+}
+
+.clean {
+    padding: .5em;
+    margin-left: 30px;
+}

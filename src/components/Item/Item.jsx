@@ -6,7 +6,7 @@ const Item = ({ data }) => {
     const { id, name, price, picture } = data
     return (
         <div className={Styled.container}>
-            <NavLink className={Styled.Link} to={`/item/${id}`}>
+            <NavLink style={{ textDecoration: "none" }} to={`/item/${id}`}>
                 <img className={Styled.img} src={picture[0]}></img>
                 <div>
                     <h3 className={Styled.name}>{name}</h3>
