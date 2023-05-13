@@ -14,7 +14,7 @@ const CheckOut = () => {
             if (element.stock > element.quantity) {
                 let newStock = element.stock - element.quantity
                 updatStock(element.id, newStock)
-            }
+            } else (alert("No se encuentra esa cantidad disponible en el momento"))
         })
         CreateOrder(data).then((element) => setorderId(element)).catch((err) => console.log(err))
     }

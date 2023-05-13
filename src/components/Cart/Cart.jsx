@@ -6,6 +6,7 @@ import Styled from "./cart.module.css"
 
 const Cart = () => {
     const { cart, delateItem, cleanCart } = useContext(cartContext)
+    console.log(typeof cart);
     const Total = cart.map((element) => element.subtotal).reduce((prev, acum) => acum + prev, 0)
     return (
         <div className={Styled.container}>

@@ -5,7 +5,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import { cartContext } from '../../context/cartContext';
 
 const ItemDetail = ({ id, name, price, description, picture, stock }) => {
-    const { addItemCart } = useContext(cartContext)
+    const { addItemCart, cart } = useContext(cartContext)
     const [quantityAdde, setQuantityAdde] = useState(0);
     const HandleAdd = (quantity) => {
         setQuantityAdde(quantity)
